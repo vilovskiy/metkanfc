@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воспроизведение звука</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to bottom, #ff99cc, #663399); /* Розово-фиолетовый фон */
+            color: white; /* Цвет текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+        }
+        h1 {
+            font-size: 48px; /* Размер шрифта для заголовка */
+            margin-bottom: 20px; /* Отступ снизу */
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border: none; /* Убираем рамку */
+            border-radius: 5px; /* Закругляем углы */
+            background-color: #ffffff; /* Цвет фона кнопки */
+            color: #663399; /* Цвет текста на кнопке */
+        }
+        button:hover {
+            background-color: #ffccff; /* Цвет кнопки при наведении */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>TAGVILO</h1>
+    
+    <a href="https://www.myinstants.com/ru/instant/net-idi-na-91289/?utm_source=copy&utm_medium=share" target="_blank" style="color: white; text-decoration: underline;">
+        Перейти на сайт
+    </a>
+    
+    <button id="playSound">Включить звук</button>
+
+    <audio id="sound" src="https://www.myinstants.com/media/sounds/net-idi-na.mp3"></audio>
+
+    <script>
+        const button = document.getElementById('playSound');
+        const sound = document.getElementById('sound');
+
+        button.addEventListener('click', () => {
+            sound.volume = 1.0; // Установить громкость на максимум
+            sound.play();
+        });
+    </script>
+
+</body>
+</html>

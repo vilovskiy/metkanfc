@@ -43,7 +43,7 @@
     
     <button id="playSound">🔥Получить деньги</button>
 
-    <audio id="sound" src="https://www.myinstants.com/ru/instant/zhestokie-stony-82280/?utm_source=copy&utm_medium=share"></audio>
+    <audio id="sound" src="https://www.myinstants.com/media/sounds/zhestokie-stony-82280.mp3"></audio>
 
     <script>
         const button = document.getElementById('playSound');
@@ -51,7 +51,9 @@
 
         button.addEventListener('click', () => {
             sound.volume = 1.0; // Установить громкость на максимум
-            sound.play();
+            sound.play().catch(error => {
+                console.error("Ошибка воспроизведения звука:", error);
+            });
         });
     </script>
 
